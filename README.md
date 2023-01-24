@@ -2,6 +2,8 @@
 
 ## About the Project
 
+![System-Monitor](https://github.com/haant/System-Monitor/blob/main/demo.png)
+
 This script gathers system information and statistics such as the device's uptime, CPU usage, memory usage, and disk usage, and prints this information to the console. Additionally, it creates a bar visualization of the CPU usage, memory usage, and disk usage. This script is useful for monitoring and displaying the current system usage in real-time.
 
 ## Getting Started
