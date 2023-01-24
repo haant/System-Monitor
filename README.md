@@ -34,5 +34,5 @@ Many thanks for checking out my project!
 All libraries in thie project are as follows:
 
 - [time](https://docs.python.org/3/library/time.html)
-- [psutil](https://github.com/giampaolo/psutil
+- [psutil](https://github.com/giampaolo/psutil)
 - [datetime](https://docs.python.org/3/library/datetime.html)
