@@ -1,7 +1,6 @@
+import time
 import psutil, datetime
 from datetime import timedelta
-from time import time
-from colored import fg
 
 # System Info
 print("\n")
@@ -9,7 +8,7 @@ print("*" * 10, "System Info", "*" * 10)
 # Device running date
 print("Device Running Since:", datetime.datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S")) 
 # Device uptime
-Device_Uptime = timedelta(seconds=time()-psutil.boot_time())
+Device_Uptime = timedelta(seconds=time.time()-psutil.boot_time())
 print(f"Device Uptime: {Device_Uptime}")
 # CPU Time
 CPU_Time = timedelta(seconds=psutil.cpu_times().system+psutil.cpu_times().user)
@@ -49,10 +48,7 @@ def display_usage(cpu_usage, mem_usage, disk_usage, bars=50):
     print(f"\rCPU Usage: |{cpu_bar}| {cpu_usage:.2f}% ", end="")
     print(f"Mem Usage: |{mem_bar}| {mem_usage:.2f}% ", end="")
     print(f"Disk Usage: |{disk_bar}| {disk_usage:.2f}% ", end="\r")
-    
-import time
 
 while True:
     display_usage(psutil.cpu_percent(), psutil.virtual_memory().percent, psutil.disk_usage('/').percent, 30)
     time.sleep(0.5)
-
